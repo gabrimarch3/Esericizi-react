@@ -6,4 +6,8 @@ class Welcome extends React.Component {
     }
 }
 
+Welcome.defaultProps = {
+    name: "Gabriel"
+};
+
 export default Welcome;
