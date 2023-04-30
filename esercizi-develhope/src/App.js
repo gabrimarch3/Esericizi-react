@@ -1,7 +1,7 @@
-import Welcome from "./components/Welcome"
+import Welcome from "./components/Welcome";
 
 function App() {
-  return (<Welcome />);
+  return <Welcome />;
 }
 
 export default App;
