@@ -9,10 +9,10 @@ class Welcome extends React.Component {
           Welcome, <strong>{this.props.name}</strong>
         </p>
         {this.props.age ? (
-          this.props.age >= 18 ? (
+          this.props.age >= 18 && this.props.age <= 65 ? (
             <Age age={this.props.age} />
           ) : (
-            <p>Mi dispiace, non sei ancora maggiorenne</p>
+            <p>Mi dispiace, non hai l'età corretta</p>
           )
         ) : (
           <p>Per favore inserisci la tua età.</p>
