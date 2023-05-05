@@ -25,3 +25,23 @@
 .button-counter button {
     height: 20px;
 }
+
+.click-tracker {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.click-tracker .red-button {
+    background-color: red;
+    color: white;
+}
+
+.click-tracker .blue-button {
+    background-color: blue;
+    color: white;
+}
+
+.click-tracker .green-button {
+    background-color: green;
+    color: white;
+}
