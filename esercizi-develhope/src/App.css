@@ -1,0 +1,27 @@
+.counters {
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;
+    width: 100%;
+}
+
+.button-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.normal-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 100px;
+}
+
+.button-counter button {
+    height: 20px;
+}

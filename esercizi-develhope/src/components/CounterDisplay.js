@@ -1,6 +1,9 @@
+const CounterDisplay = ({ count }) => {
+  return (
+    <div className="normal-counter">
+      <h1>{count}</h1>
+    </div>
+  );
+};
 
-const CounterDisplay = ({count}) => {
-    return <h1>{count}</h1>
-}
-
-export default CounterDisplay
+export default CounterDisplay;
