@@ -4,6 +4,7 @@ import ClickCounter from "./components/ClickCounter";
 import ClickTracker from "./components/ClickTracker";
 import InteractiveWelcome from "./components/InteractiveWelcome";
 import Login from "./components/Login";
+import TodoList from "./components/TodoList";
 import "./App.css"
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <ClickCounter />
       <ClickTracker />
       </div>
+      <TodoList />
     </>
   );
 }
