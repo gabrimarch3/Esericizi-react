@@ -15,13 +15,22 @@ const TodoList = () => {
 
   const handleReset = () => {
     setItem([]);
+  };
+
+  const handleRemoveOne = (id) => {
+    const updateItems = [...item];
+    updateItems.splice(id, 1);
+    setItem(updateItems)
   }
 
   return (
     <div>
       <ul>
         {item.map((item, id) => (
-          <li key={id}>{item}</li>
+          <div className="todo-item">
+            <li key={id}>{item}</li>
+            <button onClick={handleRemoveOne}>X</button>
+          </div>
         ))}
       </ul>
       <input type="text" name="todoItem" value={value} onChange={handleValue} />

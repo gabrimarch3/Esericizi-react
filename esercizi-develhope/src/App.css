@@ -54,3 +54,19 @@
     display: flex;
     gap: 10px;
 }
+
+.todo-item {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.todo-item button {
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
