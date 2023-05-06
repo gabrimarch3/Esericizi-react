@@ -12,7 +12,7 @@ const UncontrolledLogin = () => {
   return (
     <div className="uncontrolled-form">
       <form onSubmit={handleUncontrolledLogin}>
-        <input type="text" name="username" />
+        <input type="text" name="username" autoFocus/>
         <input type="password" name="password" />
         <input type="checkbox" name="remember" />
         <button type="submit">Login</button>
