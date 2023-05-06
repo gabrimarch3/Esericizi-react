@@ -23,14 +23,21 @@ const Login = (props) => {
         console.log(user);
     }
     
+    const onLogout = (event) => {
+        setuserID("");
+        setUserPassword("")
+    }
+
     const isLoginDisabled = userID === "" || userPassword === "";
+    const isLogoutDisabled = userID === "" || userPassword === "";
 
     return (
         <div className="login-form">
             <form>
-                <input type="text" placeholder="Nome Utente" onChange={handleUserID}/>
-                <input type="password"  placeholder="1234" onChange={handleUserPassword}/>
-                <button disabled={isLoginDisabled} onClick={onLogin}>Log-in</button>
+                <input type="text" value={userID} placeholder="Nome Utente" onChange={handleUserID}/>
+                <input type="password" value={userPassword}  placeholder="1234" onChange={handleUserPassword}/>
+                <button className="login" disabled={isLoginDisabled} onClick={onLogin}>Log-in</button>
+                <button className="logout" disabled={isLogoutDisabled} onClick={onLogout}>Log-out</button>
             </form>
         </div>
     )   
