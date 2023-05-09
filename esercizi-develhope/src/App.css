@@ -1,3 +1,7 @@
+* {
+    font-family: sans-serif;
+}
+
 .counters {
     display: flex;
     justify-content: flex-start;

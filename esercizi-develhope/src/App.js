@@ -5,7 +5,7 @@ import ClickTracker from "./components/ClickTracker";
 import InteractiveWelcome from "./components/InteractiveWelcome";
 import Login from "./components/Login";
 import TodoList from "./components/TodoList";
-import "./App.css"
+import "./App.css";
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
       <InteractiveWelcome />
       <Login />
       <div className="counters">
-      <Counter start={10} add={2} ms={2000} />
-      <ClickCounter />
-      <ClickTracker />
+        <Counter start={10} add={1.5} ms={1000} />
+        <ClickCounter />
+        <ClickTracker />
       </div>
       <TodoList />
     </>
