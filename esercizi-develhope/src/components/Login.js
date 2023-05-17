@@ -27,10 +27,10 @@ const Login = (props) => {
 
     return (
         <div className="login-form">
-            <form>
+            <form onSubmit={onLogin}>
                 <input type="text" placeholder="Nome Utente" onChange={handleUserID}/>
                 <input type="password"  placeholder="1234" onChange={handleUserPassword}/>
-                <button disabled={isLoginDisabled} onClick={onLogin}>Log-in</button>
+                <button disabled={isLoginDisabled} type="submit">Log-in</button>
             </form>
         </div>
     )   
