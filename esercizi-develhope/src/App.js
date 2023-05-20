@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import TodoList from "./components/TodoList";
 import "./App.css";
 import GithubUser from "./components/GitHubUser";
+import GithubUserList from "./components/GitHubUserList";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
       <TodoList />
       <div className="github-user">
         <h2>Dettagli Account:</h2>
-        <GithubUser username="gabrimarch3" />
+        <GithubUserList/>
       </div>
     </>
   );
