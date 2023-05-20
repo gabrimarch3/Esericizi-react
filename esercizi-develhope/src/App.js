@@ -6,6 +6,7 @@ import InteractiveWelcome from "./components/InteractiveWelcome";
 import Login from "./components/Login";
 import TodoList from "./components/TodoList";
 import "./App.css";
+import GithubUser from "./components/GitHubUser";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
         <ClickTracker />
       </div>
       <TodoList />
+      <div className="github-user">
+        <h2>Dettagli Account:</h2>
+        <GithubUser username="gabrimarch3" />
+      </div>
     </>
   );
 }
