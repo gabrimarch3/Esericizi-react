@@ -1,18 +1,27 @@
-import { useState } from "react";
+import { useState } from "react"
+import SideEffect from "./SideEffect";
 
-const ClickCounter = () => {
-    const [counter, setCounter] = useState(0)
 
-    function handleCounter() {
-        setCounter(counter + 1)
+function ClickCounter() {
+
+    const [counter, setCount] = useState(0);
+
+    const increase = () => {
+        setCount(count => count + 1)
     }
 
-    return (
-        <div className="button-counter">
-            <h1>{counter}</h1>
-            <button onClick={handleCounter}>Cliccami!</button>
-        </div>
-    )
+    const decrease = () => {
+        if (counter > 0) {
+            setCount(count => count - 1);
+        }
+      };
+
+   function onCounterChange() {
+    console.log(`Il contatore è ${counter}`)
+    }
+
+        return  <SideEffect increase={increase} decrease={decrease} counter={counter} change={onCounterChange({counter})}/>
+    
 }
 
 export default ClickCounter;
