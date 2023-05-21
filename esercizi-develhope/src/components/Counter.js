@@ -1,30 +1,16 @@
-import { useState, useEffect } from "react"
-
+import { useCounter } from "./hook/useCounter";
 
 function Counter() {
+  const { counter, increment, decrement, reset } = useCounter();
 
-    const [counter, setCount] = useState(0);
-
-    useEffect(() => {
-        console.log(`il counter è montato`)
-        return () => {
-            console.log('il counter è smontato')
-        }
-    }, [])
-
-    useEffect(() =>{
-      let intervallo = setInterval(function () {setCount(counter + 1)},1000)
-
-      return () => {
-        clearInterval(intervallo, 1000)
-      }
-    }, [counter])
-
-    return (
-        <div>
-          <h1>{counter}</h1>
-        </div>
-      );
+  return (
+    <>
+      <h2>Count: {counter}</h2>
+      <button onClick={increment}>Incrementa</button>
+      <button onClick={decrement}>Decrementa</button>
+      <button onClick={reset}>Resetta</button>
+    </>
+  );
 }
 
-export default Counter
+export default Counter;
