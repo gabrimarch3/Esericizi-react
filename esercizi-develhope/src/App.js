@@ -8,6 +8,7 @@ import TodoList from "./components/TodoList";
 import "./App.css";
 import GithubUser from "./components/GitHubUser";
 import GithubUserList from "./components/GitHubUserList";
+import Car from "./components/Car";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
       <div className="github-user">
         <h2>Dettagli Account:</h2>
         <GithubUserList/>
+      </div>
+      <div>
+        <Car />
       </div>
     </>
   );
