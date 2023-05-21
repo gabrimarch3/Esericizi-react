@@ -1,6 +1,6 @@
 import { useGithubUser } from "./hook/UseGithubUser"
 
-function GithubUser(props) {
+function GitHubUser(props) {
     const {data, loading, error, onFetchUser} = useGithubUser(props.username);
 
     function userDataHandle(){
@@ -20,4 +20,4 @@ function GithubUser(props) {
             </>
 }  
 
-export default GithubUser;
+export default GitHubUser;
