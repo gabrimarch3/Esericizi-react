@@ -1,19 +1,16 @@
-import { Routes, Route, Link, Outlet } from "react-router-dom";
-import GitHubUserList from "./components/GitHubUserList";
-import ShowGithubUser from "./components/ShowGithubUser";
+import {Route, Routes } from 'react-router-dom';
+import GitHubUserList from './components/GitHubUserList';
 
 function App() {
   return <div>
           <Routes>
-            <Route path="list" element={<GitHubUserList/>}>
-              <Route path=":username" element={<ShowGithubUser/>}/>
-            </Route>
+            <Route path='user'>
+              <Route path='list' element={<GitHubUserList/>}>
+                <Route index element={<p>Add a user and select it</p>}/> 
+              </Route> 
+            </Route> 
           </Routes>
-          <p><Link to="list">Lista</Link></p>
-          <p><Link to="list/gabrimarch3">Mio profilo Github</Link></p>
-          <Outlet/>
         </div>
 }
-
 
 export default App;
