@@ -1,23 +1,20 @@
-import { useGithubUser } from "./hook/UseGithubUser"
+import {useGithubUser} from "./hook/UseGithubUser"
 
-function GitHubUser(props) {
-    const {data, loading, error, onFetchUser} = useGithubUser(props.username);
+function GithubUser(props) {
+  const { data } = useGithubUser(props.username);
 
-    function userDataHandle(){
-        onFetchUser(props.username)
-    }
+  console.log(data);
 
-    return <>
-            <button onClick={userDataHandle}>Load</button> 
-            {data && (
-                <div>
-                    {loading && <h1>Loading...</h1>}
-                    {error && <h1>Error</h1>}
-                    <h1>{data.name}</h1>
-                    <p>{data.login}</p>
-                </div>
-            )}   
-            </>
-}  
+  return (
+    <div>
+      {data && (
+        <div>
+          <h3>{data.name}</h3>
+          <p>{data.login}</p>
+        </div>
+      )}
+    </div>
+  );
+}
 
-export default GitHubUser;
+export default GithubUser;
